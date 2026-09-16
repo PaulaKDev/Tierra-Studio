@@ -7,8 +7,7 @@ Landing page corporativa para un estudio de reformas de alta gama y consultoría
 ## 🚀 Demo en Vivo
 
 Puedes ver la landing page desplegada y funcionando en:
-👉 **[Ver Demo en Vivo](#)** *(Añade aquí tu enlace de GitHub Pages, Netlify o Vercel)*
-
+👉 **[Ver Demo en Vivo](https://tierra-studio.vercel.app)** 
 ---
 
 ## 🛠️ Tecnologías Utilizadas

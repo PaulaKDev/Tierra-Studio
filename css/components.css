@@ -1,0 +1,155 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--accent-terracotta);
+  color: #ffffff;
+  border: 1px solid var(--accent-terracotta);
+}
+
+.btn--primary:hover {
+  background-color: var(--accent-terracotta-hover);
+  border-color: var(--accent-terracotta-hover);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn--outline:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* ==========================================================================
+   SECCIÓN SERVICIOS (DISEÑO FIEL A LA IMAGEN)
+   ========================================================================== */
+
+/* Fondo general suave estilo arena/crema */
+.services.section {
+  background-color: #f9f7f2;
+  padding: 5rem 0;
+}
+
+/* Encabezado */
+.section__header {
+  margin-bottom: 3rem;
+}
+
+.section__subtitle {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c85a46; /* Terracota de la imagen */
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle__dot {
+  font-size: 1rem;
+  line-height: 0;
+}
+
+.section__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.75rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.section__description {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666666;
+  max-width: 680px;
+}
+
+/* Grid de 2 columnas */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Tarjeta Blanca */
+.service-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Caja del Icono */
+.service-card__icon-box {
+  width: 44px;
+  height: 44px;
+  background-color: #fcf4f2; /* Fondo rosa/terracota muy claro */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c85a46; /* Icono en color terracota */
+  margin-bottom: 1.5rem;
+}
+
+/* Textos de la tarjeta */
+.service-card__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.service-card__text {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #666666;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section__title {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 1.75rem;
+  }
+}

@@ -1,0 +1,681 @@
+/* Header Transparente */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 1000;
+  background: transparent;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Logo de Imagen */
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo__img {
+  height: 28px; /* Ajusta la altura deseada para tu logo */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.logo__sub {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Navegación */
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav__link {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+/* Botón CONTACTO estilo Delineado Fino */
+.btn--nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn--nav:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav__link:hover {
+  opacity: 1;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* Superposición oscura semitransparente para legibilidad + Imagen de fondo */
+  background: linear-gradient(rgba(28, 26, 25, 0.55), rgba(28, 26, 25, 0.55)),
+              url('../assets/img/hero.png') center/cover no-repeat;
+  color: #ffffff;
+  padding-top: 90px;
+}
+
+.hero__container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.hero__description {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 620px;
+  margin-bottom: 2.5rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/* Grids */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+/* Grid de 4 columnas paralelas */
+.process__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+/* ==========================================================================
+   SECCIÓN METODOLOGÍA / PROCESO (FIEL A LA IMAGEN)
+   ========================================================================== */
+
+.process.section {
+  background-color: #f9f7f2; /* Fondo crema suave */
+  padding: 5rem 0;
+}
+
+/* Tarjeta Blanca Vertical */
+.process-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2.25rem 1.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Número del Paso (Serif y Terracota claro) */
+.process-card__step {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #e5a99c; /* Tono terracota claro suavizado */
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* Título de la Tarjeta */
+.process-card__title {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+/* Texto de la Tarjeta */
+.process-card__text {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #666666;
+}
+
+/* Adaptación para pantallas medianas y móviles */
+@media (max-width: 1024px) {
+  .process__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .process__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tarjeta del Proyecto */
+.project-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+/* VISOR BEFORE / AFTER (SOLUCIÓN TÉCNICA A IMÁGENES) */
+.before-after {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background-color: var(--accent-sand);
+  user-select: none;
+}
+
+.before-after__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.before-after__image--after {
+  width: 100%;
+  z-index: 1;
+}
+
+.before-after__image--before {
+  width: 50%;
+  z-index: 2;
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Asegura que la foto interna ocupe todo el ancho real de la tarjeta */
+.before-after__image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.before-after__image--after img {
+  width: 100%;
+}
+
+.before-after__image--before img {
+  width: 100%;
+  min-width: 100%;
+  max-width: none;
+}
+
+.before-after__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+  cursor: ew-resize;
+  margin: 0;
+}
+
+.before-after__handle::before {
+  content: '⟷';
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.project-card__content {
+  padding: 1.5rem;
+}
+
+.project-card__tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-terracotta);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.project-card__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card__desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Form & Footer */
+.contact__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-2xl);
+  background-color: var(--bg-card);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-md);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   FOOTER (DISEÑO FIEL A LA IMAGEN)
+   ========================================================================== */
+.footer {
+  background-color: #1a1a1a; /* Fondo gris oscuro / antracita */
+  color: #ffffff;
+  padding: 5rem 0 3rem 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bloque Superior en Grid de 3 columnas distribuidas */
+.footer__top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Columna Marca */
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.footer__desc {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.5;
+}
+
+/* Columnas Secundarias (Oficinas y Contacto) */
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__col-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.footer__col-text {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-right: 0.5rem;
+}
+
+.footer__link:hover {
+  color: #ffffff;
+}
+
+/* Línea divisoria */
+.footer__divider {
+  border: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 4rem 0 2rem 0;
+}
+
+/* Bloque Inferior */
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.footer__legal {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.footer__legal-link {
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__legal-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 850px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer__bottom {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .footer__legal {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .services__grid, .projects__grid, .contact__wrapper { grid-template-columns: 1fr; }
+  .process__grid { grid-template-columns: repeat(2, 1fr); }
+  .hero__title { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 76px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 0 9px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .nav-toggle__bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  .nav {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    background-color: var(--bg-dark);
+    border-radius: var(--radius-sm);
+    display: none;
+  }
+
+  .nav.open {
+    display: block;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+  }
+
+  .nav__link,
+  .btn--nav {
+    display: block;
+    padding: 0.75rem;
+  }
+
+  .btn--nav {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding-top: 76px;
+    background-position: center center;
+  }
+
+  .hero__container {
+    max-width: 680px;
+  }
+
+  .contact__wrapper {
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+  }
+
+  .footer__container {
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section {
+    padding: var(--space-lg) 0;
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 9vw, 2.5rem);
+  }
+
+  .hero__description {
+    font-size: 0.875rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .section__title {
+    font-size: 1.8rem;
+  }
+
+  .process__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .before-after {
+    height: clamp(220px, 65vw, 280px);
+  }
+
+  .contact__wrapper {
+    padding: 1.25rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
+}
+
+/* ==========================================================================
+   SECCIÓN FAQ / PREGUNTAS FRECUENTES (DISEÑO FIEL A LA IMAGEN)
+   ========================================================================== */
+.faq.section {
+  background-color: #f9f7f2;
+  padding: 5rem 0;
+}
+
+.faq__list {
+  max-width: 820px;
+  margin-top: 2.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.faq-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 0;
+  background: transparent;
+}
+
+.faq-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.faq-item__header::-webkit-details-marker,
+.faq-item__header::marker {
+  display: none;
+}
+
+.faq-item__title {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.faq-item__icon {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+.faq-item__icon::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #c85a46;
+  border-bottom: 2px solid #c85a46;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-item__icon::after {
+  transform: rotate(-135deg);
+  top: 5px;
+}
+
+.faq-item__content {
+  margin-top: 0.85rem;
+  padding-right: 2rem;
+}
+
+.faq-item__content p {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #666666;
+}

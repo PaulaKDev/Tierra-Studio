@@ -1,0 +1,30 @@
+:root {
+  --bg-main: #f9f8f6;
+  --bg-card: #ffffff;
+  --bg-dark: #1c1a19;
+
+  --text-primary: #1c1a19;
+  --text-secondary: #66605b;
+  --text-muted: #99928c;
+  --text-light: #f9f8f6;
+
+  --accent-terracotta: #cb5d48;
+  --accent-terracotta-hover: #b44f3b;
+  --accent-sand: #e6dfd5;
+
+  --border-color: rgba(28, 26, 25, 0.08);
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  --container-max: 1140px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+}
